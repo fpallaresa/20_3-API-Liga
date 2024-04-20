@@ -69,12 +69,7 @@ router.get("/name/:name", async (req, res) => {
 router.post("/", async (req, res) => {
 
   try {
-    const player = new Player({
-      name: req.body.name,
-      lastname: req.body.lastname,
-      position: req.body.position,
-      jerseyNumber: req.body.jerseyNumber,
-    });
+    const player = new Player(req.body);
 
     const createdPlayer = await player.save();
     return res.status(201).json(createdPlayer);
