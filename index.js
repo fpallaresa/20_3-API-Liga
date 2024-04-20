@@ -2,6 +2,7 @@ const express = require("express");
 const { playerRouter } = require("./routes/player.routes.js");
 const { teamRouter } = require("./routes/team.routes.js");
 const { matchRouter } = require("./routes/match.routes.js");
+const cors = require("cors");
 
 // Conexión a la BBDD
 const main = async () => {
@@ -13,6 +14,11 @@ const main = async () => {
   const server = express();
   server.use(express.json());
   server.use(express.urlencoded({ extended: false }));
+  server.use(
+    cors({
+      origin: "http://localhost:3000",
+    })
+  );
 
   // Rutas
   const router = express.Router();

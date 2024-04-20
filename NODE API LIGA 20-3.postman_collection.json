@@ -1,0 +1,526 @@
+{
+	"info": {
+		"_postman_id": "e7548e0f-e122-4354-aa30-ba01394684cd",
+		"name": "NODE API LIGA 20-3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21261113"
+	},
+	"item": [
+		{
+			"name": "player",
+			"item": [
+				{
+					"name": "Get player",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/player?page=1&limit=10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"player"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get player by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/player/66238b5cdb85a40e6e9017bb",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"player",
+								"66238b5cdb85a40e6e9017bb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search player by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/player/name/Iker",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"player",
+								"name",
+								"Iker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create player",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"name\": \"aaaa\", \r\n    \"lastname\": \"bbbb\", \r\n    \"position\": \"cccc\", \r\n    \"jerseyNumber\": 10 \r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/player",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"player"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update player",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"El libro de la Selva\",\r\n    \"pages\": \"112\",\r\n    \"publisher\": \"Pinguin Random House\",\r\n    \"publisherCountry\": \"NIGERIA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/book/661d47f1fb42e0d2d798e043",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"book",
+								"661d47f1fb42e0d2d798e043"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete player",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/book/6614f95700cd160360c9508c",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"book",
+								"6614f95700cd160360c9508c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "team",
+			"item": [
+				{
+					"name": "Get team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/author?page=1&limit=10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"author"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get team by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/author/6614ec9479bb663350b545fc",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"author",
+								"6614ec9479bb663350b545fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search team by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/team/name/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"team",
+								"name",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create team",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Nombre Apellido Apellido\",\r\n        \"country\": \"Spain\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/author",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update team",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Nombre Apellido Apellido\",\r\n        \"country\": \"Italy\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/author/6614fb6d24b135689808c636",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"author",
+								"6614fb6d24b135689808c636"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete team",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/author/6614fb6d24b135689808c636",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"author",
+								"6614fb6d24b135689808c636"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "match",
+			"item": [
+				{
+					"name": "Get match",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/author?page=1&limit=10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"author"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get match by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/author/6614ec9479bb663350b545fc",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"author",
+								"6614ec9479bb663350b545fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create match",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Nombre Apellido Apellido\",\r\n        \"country\": \"Spain\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/author",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update match",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Nombre Apellido Apellido\",\r\n        \"country\": \"Italy\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/author/6614fb6d24b135689808c636",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"author",
+								"6614fb6d24b135689808c636"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete match",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/match/6623a706595a246f80e724a8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"match",
+								"6623a706595a246f80e724a8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
