@@ -12,7 +12,7 @@ const teamSchema = new Schema(
       type: Number,
       required: true,
     },
-    country: {
+    city: {
       type: String,
       required: true,
     },
@@ -22,5 +22,5 @@ const teamSchema = new Schema(
   }
 );
 
-const Song = mongoose.model("Team", teamSchema);
+const Team = mongoose.model("Team", teamSchema);
 module.exports = { Team };
