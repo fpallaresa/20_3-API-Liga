@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node --watch index.js",
     "seed:sample": "node ./seeds/sample.seed.js",
+    "seed:fullSeed": "node ./seeds/full.seed.js",
     "lint": "eslint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
